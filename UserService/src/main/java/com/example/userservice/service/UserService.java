@@ -9,5 +9,5 @@ public interface UserService {
     User getOneUser(String id);
     User createUser(User u);
     boolean updateUser(String id, User u);
-    boolean deleteStudent(String id);
+    boolean deleteUser(String id);
 }

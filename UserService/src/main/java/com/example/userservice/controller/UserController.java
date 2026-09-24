@@ -38,13 +38,19 @@ public class UserController {
         return ResponseEntity.ok(u1);
     }
 
-    @PutMapping("/update/{id}")
-    public ResponseEntity<User>isUpdate(PathVariable String id, @RequestBody User u){
-        User u1=ur.updateUser(id, u);
-
+    @PutMapping("/upadteUser/{id}")
+    public String upadteUser(@PathVariable String id, @RequestBody User u1){
+        boolean x = ur.updateUser(id,u1);
+        if(x){
+            return "Sucess";
+        }
+        return "Data not Found";
     }
 
-
+    @DeleteMapping("/deleteUser/{id}")
+    public boolean deleteUSer(@PathVariable String id){
+        return ur.deleteUser(id);
+    }
 
 
 }
