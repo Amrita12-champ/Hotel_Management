@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean deleteStudent(String id) {
+    public boolean deleteUser(String id) {
         return false;
     }
 }
