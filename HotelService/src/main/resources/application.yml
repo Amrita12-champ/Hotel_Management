@@ -6,7 +6,19 @@ spring:
     username: postgres
     password: Amrita@12
     url: jdbc:postgresql://localhost:5432/hotelservice
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+  eureka:
+    client:
+      fetch-registry: true
+      register-with-eureka: true
+      service-url:
+        defaultZone: http://localhost:1234/eureka
+
+    instance:
+      ip-address: true
+
